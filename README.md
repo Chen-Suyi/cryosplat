@@ -101,9 +101,6 @@ sh train_gmm_10049.sh
 The scripts specify dataset paths, training hyperparameters, and output
 directories, and can be used directly or adapted to other datasets.
 
-For **runtime and GPU memory measurements**, enable the `--no-half-maps`
-option to disable half-map reconstruction and FSC evaluation.
-
 
 ## Citation
 
