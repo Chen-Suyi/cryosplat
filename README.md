@@ -107,7 +107,7 @@ option to disable half-map reconstruction and FSC evaluation.
 
 ## Citation
 
-If you find CryoSplat useful in your research, please cite: -->
+If you find CryoSplat useful in your research, please cite:
 
 ```bibtex
 @inproceedings{chen2026cryosplat,
