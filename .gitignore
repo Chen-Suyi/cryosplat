@@ -1,0 +1,97 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+*.pyd
+*.dll
+*.dylib
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+pip-wheel-metadata/
+
+# Virtual environments
+.env/
+.venv/
+venv/
+ENV/
+env/
+
+# =========================
+# CUDA / CMake
+# =========================
+*.o
+*.obj
+*.a
+*.lib
+*.exp
+*.out
+*.ptx
+*.cubin
+*.fatbin
+
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# =========================
+# Submodules build artifacts
+# =========================
+submodules/diff-gaussian-rasterization/build/
+submodules/diff-gaussian-rasterization/*.egg-info/
+
+# =========================
+# Logs / checkpoints
+# =========================
+experiments/
+*.log
+logs/
+wandb/
+checkpoints/
+outputs/
+runs/
+
+# training outputs
+*.ckpt
+*.pth
+*.pt
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# VSCode / IDE
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Temporary files
+# =========================
+*.swp
+*.tmp
+*.bak
+*.orig
+
+# =========================
+# Dataset / large files
+# =========================
+data/
+datasets/
+*.mrc
+*.star
+*.npz
+*.npy
