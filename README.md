@@ -13,7 +13,7 @@ CryoSplat is a physics-consistent Gaussian Splatting framework
 for cryo-EM homogeneous reconstruction.
 
 By reformulating Gaussian Splatting as an orthogonal projection-aware
-kernel aligned with cryo-EM image formation, CryoSplat enables stable
+kernel aligned with cryo-EM image formation, cryoSplat enables stable
 reconstruction directly from raw particle images with random initialization.
 
 Experiments on real datasets demonstrate improved robustness
@@ -107,7 +107,7 @@ option to disable half-map reconstruction and FSC evaluation.
 
 ## Citation
 
-If you find CryoSplat useful in your research, please cite:
+If you find cryoSplat useful in your research, please cite:
 
 ```bibtex
 @inproceedings{chen2026cryosplat,
