@@ -7,7 +7,6 @@ Official implementation of:
 
 📄 [OpenReview (ICLR 2026)](https://openreview.net/forum?id=dLaUZKBzta)
 
----
 
 ## Introduction
 CryoSplat is a physics-consistent Gaussian Splatting framework
@@ -26,7 +25,6 @@ and efficiency over representative baselines.
   </a>
 </p>
 
----
 
 ## Installation
 
@@ -77,7 +75,6 @@ python -m pip install --no-build-isolation submodules/diff-gaussian-rasterizatio
 pip install cryodrgn
 ```
 
----
 
 ## Dataset Preparation
 
@@ -91,7 +88,6 @@ EMPIAR instructions:
 
 All experiments assume the same directory structure and metadata conventions.
 
----
 
 ## Quick Start
 
@@ -108,7 +104,6 @@ directories, and can be used directly or adapted to other datasets.
 For **runtime and GPU memory measurements**, enable the `--no-half-maps`
 option to disable half-map reconstruction and FSC evaluation.
 
----
 
 ## Citation
 
@@ -123,7 +118,6 @@ If you find CryoSplat useful in your research, please cite: -->
 }
 ```
 
----
 
 ## Acknowledgements
 
