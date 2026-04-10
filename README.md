@@ -3,10 +3,11 @@
 Official implementation of:
 
 **CryoSplat: Gaussian Splatting for Cryo-EM Homogeneous Reconstruction**  
+Suyi Chen, Haibin Ling  
 
+In *Proceedings of the International Conference on Learning Representations (ICLR), 2026*
 
-📄 [OpenReview (ICLR 2026)](https://openreview.net/forum?id=dLaUZKBzta)
-
+📄 [OpenReview](https://openreview.net/forum?id=dLaUZKBzta) | 📄 [arXiv](https://arxiv.org/abs/2508.04929) | 🎥 [ICLR Poster](https://iclr.cc/virtual/2026/poster/10008416)
 
 ## Introduction
 CryoSplat is a physics-consistent Gaussian Splatting framework
