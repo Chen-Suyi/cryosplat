@@ -108,11 +108,13 @@ directories, and can be used directly or adapted to other datasets.
 If you find cryoSplat useful in your research, please cite:
 
 ```bibtex
-@inproceedings{chen2026cryosplat,
-  title={CryoSplat: Gaussian Splatting for Cryo-EM Homogeneous Reconstruction},
-  author={Chen, Suyi and Ling, Haibin},
-  booktitle={International Conference on Learning Representations (ICLR)},
-  year={2026}
+@inproceedings{
+chen2026cryosplat,
+title={CryoSplat: Gaussian Splatting for Cryo-{EM} Homogeneous Reconstruction},
+author={Suyi Chen and Haibin Ling},
+booktitle={The Fourteenth International Conference on Learning Representations},
+year={2026},
+url={https://openreview.net/forum?id=dLaUZKBzta}
 }
 ```
 
