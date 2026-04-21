@@ -109,12 +109,12 @@ If you find cryoSplat useful in your research, please cite:
 
 ```bibtex
 @inproceedings{
-chen2026cryosplat,
-title={CryoSplat: Gaussian Splatting for Cryo-{EM} Homogeneous Reconstruction},
-author={Suyi Chen and Haibin Ling},
-booktitle={The Fourteenth International Conference on Learning Representations},
-year={2026},
-url={https://openreview.net/forum?id=dLaUZKBzta}
+  chen2026cryosplat,
+  title={CryoSplat: Gaussian Splatting for Cryo-{EM} Homogeneous Reconstruction},
+  author={Suyi Chen and Haibin Ling},
+  booktitle={The Fourteenth International Conference on Learning Representations},
+  year={2026},
+  url={https://openreview.net/forum?id=dLaUZKBzta}
 }
 ```
 
