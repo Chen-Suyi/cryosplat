@@ -8,6 +8,10 @@ Suyi Chen, Haibin Ling
 In *Proceedings of the International Conference on Learning Representations (ICLR), 2026*
 
 📄 [OpenReview](https://openreview.net/forum?id=dLaUZKBzta) | 📄 [arXiv](https://arxiv.org/abs/2508.04929) | 🎥 [ICLR Poster](https://iclr.cc/virtual/2026/poster/10008416)
+## News
+
+- **August 9, 2026:** Released differentiable GMM renderer v0.0.2. This update aligns odd-sized images with the centered FFT grid, corrects projection-amplitude normalization, and fixes unintended one-axis smoothing when antialiasing is disabled.
+- **February 16, 2026:** Released the official implementation of cryoSplat.
 
 ## Introduction
 CryoSplat is a physics-consistent Gaussian Splatting framework
@@ -126,5 +130,4 @@ If you find cryoSplat useful in your research, please cite:
 
 This project introduces a Gaussian Splatting kernel adapted for cryo-EM reconstruction
 and integrates it into a CryoDRGN-based training pipeline for reproducibility.
-
 

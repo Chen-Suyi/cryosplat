@@ -23,6 +23,7 @@ build_base = os.path.join("build", f"torch_{torch_version}")
 
 setup(
     name="diff_gaussian_rasterization",
+    version="0.0.2",
     packages=['diff_gaussian_rasterization'],
     ext_modules=[
         CUDAExtension(

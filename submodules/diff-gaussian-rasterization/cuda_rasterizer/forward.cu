@@ -148,10 +148,12 @@ __global__ void preprocessCUDA(int P,
 	// Anti-aliasing (EWA algorithm) (may not applicable for cryoEM)
 	constexpr float h_var = 0.3f; // TODO: A empirical number need to be checked
 
-	if(antialiasing)
+	if (antialiasing)
+	{
 		cov.x += h_var;
 		cov.z += h_var;
 		det = cov.x * cov.z - cov.y * cov.y; // The determinant after anti-aliasing
+	}
 
 	// Invert covariance (EWA algorithm)
 	if (det == 0.0f)
@@ -178,13 +180,13 @@ __global__ void preprocessCUDA(int P,
 	radii[idx] = my_radius;
 	points_xy_image[idx] = point_image;
 
-	// Compensation for projective matrix
-	float det_proj = projmatrix[0] * projmatrix[5] * projmatrix[10];
+	// Compensation for the 2D coordinate transform after integrating out z.
+	// Including the z scale would bias the amplitude of the projected Gaussian.
+	float det_proj_2d = projmatrix[0] * projmatrix[5];
 
 	// Inverse 2D covariance and amplitude neatly pack into one float4
-	float amplitude = amplitudes[idx] * det_proj * W * H * 0.25f;
-	// float amplitude = amplitudes[idx] * det_proj;
-	amplitude = det_proj < 0 ? -amplitude : amplitude; // abs(det_proj)
+	float amplitude = amplitudes[idx] * det_proj_2d * W * H * 0.25f;
+	amplitude = det_proj_2d < 0 ? -amplitude : amplitude; // abs(det_proj_2d)
 	conic_amplitude[idx] = { conic.x, conic.y, conic.z, amplitude };
 
 

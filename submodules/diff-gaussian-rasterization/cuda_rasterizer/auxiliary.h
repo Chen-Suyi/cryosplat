@@ -21,9 +21,10 @@
 #define BLOCK_SIZE (BLOCK_X * BLOCK_Y)
 #define NUM_WARPS (BLOCK_SIZE/32)
 
-__forceinline__ __device__ float ndc2Pix(float v, int S) // cryo-EM protocl
+__forceinline__ __device__ float ndc2Pix(float v, int S) // cryo-EM protocol
 {
-	return (v + 1.0) * S * 0.5;
+	// Align the continuous origin with the centered FFT grid at index S // 2.
+	return (v + 1.0f) * S * 0.5f - 0.5f * (S & 1);
 }
 
 __forceinline__ __device__ void getRect(const float2 p, int max_radius, uint2& rect_min, uint2& rect_max, dim3 grid)

@@ -75,9 +75,11 @@ __global__ void computeCov2DCUDA(int P,
 	float c_xy = 0.25f * w * h * cov2D[0][1];
 	float c_yy = 0.25f * h * h * cov2D[1][1];
 	
-	float det_proj = projmatrix[0] * projmatrix[5] * projmatrix[10];
-	const float dL_damplitude_v = dL_damplitude[idx] * det_proj * w * h * 0.25f;
-	dL_damplitude[idx] = det_proj < 0 ? -dL_damplitude_v : dL_damplitude_v; // abs(det_proj)
+	// Match the forward pass: projection has already integrated out z, so only
+	// the 2D coordinate-transform Jacobian contributes to amplitude scaling.
+	float det_proj_2d = projmatrix[0] * projmatrix[5];
+	const float dL_damplitude_v = dL_damplitude[idx] * det_proj_2d * w * h * 0.25f;
+	dL_damplitude[idx] = det_proj_2d < 0 ? -dL_damplitude_v : dL_damplitude_v; // abs(det_proj_2d)
 
 	constexpr float h_var = 0.3f;
 
